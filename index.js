@@ -1,7 +1,6 @@
 let queues = {};
 module.exports = (key, fn) => {
-  if(!(key in queues)){
-    queues[key] = [];
+  if(key in queues){
     return Promise.resolve(fn()).then(data => {
       process.nextTick(() => {
         queues[key].forEach(deferred => deferred.resolve(data));
@@ -16,6 +15,7 @@ module.exports = (key, fn) => {
       return Promise.reject(err);
     });
   }else{
+    queues[key] = [];
     return new Promise((resolve, reject) => {
       queues[key].push({
         resolve,
