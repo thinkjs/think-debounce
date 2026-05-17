@@ -1,3 +1,5 @@
+This repository has been migrated. For ongoing updates, please see https://github.com/thinkjs/thinkjs/tree/master/packages/think-debounce.
+
 # think-debounce
 [![Build Status](https://img.shields.io/travis/thinkjs/think-debounce/master.svg?style=flat-square)](https://travis-ci.org/thinkjs/think-debounce)
 [![Coverage Status](https://img.shields.io/coveralls/thinkjs/think-debounce/master.svg?style=flat-square)](https://coveralls.io/github/thinkjs/think-debounce?branch=master)
